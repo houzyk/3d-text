@@ -62,7 +62,11 @@ const Hero = () => {
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         {letters.map((letter, index) => (
-          <Letter position={letterPositions[index]} letter={letter}/>
+          <Letter 
+            position={letterPositions[index]} 
+            letter={letter} 
+            key={letter+index}
+          />
         ))}
       </Canvas>
     </StyleWrapper>
