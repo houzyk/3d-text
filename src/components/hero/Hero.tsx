@@ -35,15 +35,13 @@ const Hero = () => {
       setHLetterPosition([0, 3, 0]);
       setOLetterPosition([0, 2, 0]);
       setULetterPosition([0, 1, 0]);
-      setZLetterPosition([0, 0, 0]);
       setALetterPosition([0, -1, 0]);
       setILetterPosition([0, -2, 0]);
       setRLetterPosition([0, -3, 0]);
     } else {
-      setHLetterPosition([-1, 0, 0]);
+      setHLetterPosition([-3, 0, 0]);
       setOLetterPosition([-2, 0, 0]);
-      setULetterPosition([-3, 0, 0]);
-      setZLetterPosition([0, 0, 0]);
+      setULetterPosition([-1, 0, 0]);
       setALetterPosition([1, 0, 0]);
       setILetterPosition([2, 0, 0]);
       setRLetterPosition([3, 0, 0]);
