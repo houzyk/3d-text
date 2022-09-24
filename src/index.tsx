@@ -2,10 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import GlobalStyle from './styles/globalStyles';
-
-import App from './hoc/App';
-import Header from './hoc/Header';
-import Footer from './hoc/Footer';
+import { App, Header, Footer} from './hoc';
 declare global {
   namespace JSX {
     interface IntrinsicElements {

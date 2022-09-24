@@ -1,6 +1,4 @@
-import React from 'react';
-
-import Hero from "../components/hero/Hero";
+import { Hero } from "../components";
 
 const App = () => {
   return (
