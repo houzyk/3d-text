@@ -6,6 +6,13 @@ import GlobalStyle from './styles/globalStyles';
 import App from './hoc/App';
 import Header from './hoc/Header';
 import Footer from './hoc/Footer';
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      textGeometry: any;
+    }
+  }
+}
 
 const main = document.getElementById('root-main') as HTMLElement;
 const header = document.getElementById('root-header') as HTMLElement;
