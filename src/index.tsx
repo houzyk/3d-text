@@ -14,36 +14,19 @@ declare global {
   }
 }
 
-const main = document.getElementById('root-main') as HTMLElement;
-const header = document.getElementById('root-header') as HTMLElement;
-const footer = document.getElementById('root-footer') as HTMLElement;
-
-if (main) {
-  const mainRoot = ReactDOM.createRoot(main);
-  mainRoot.render(
-    <React.StrictMode>
-      <GlobalStyle />
-      <App />
-    </React.StrictMode>
-  );
+const renderComponentIntoElement = (selector: string, Component: any) => {
+  const element = document.getElementById(selector) as HTMLElement;
+  if (element) {
+    const root = ReactDOM.createRoot(element);
+    root.render(
+      <React.StrictMode>
+        <GlobalStyle />
+        <Component/>
+      </React.StrictMode>
+    );
+  }
 }
 
-if (header) {
-  const headerRoot = ReactDOM.createRoot(header);
-  headerRoot.render(
-    <React.StrictMode>
-      <GlobalStyle />
-      <Header />
-    </React.StrictMode>
-  );
-}
-
-if (footer) {
-  const footerRoot = ReactDOM.createRoot(footer);
-  footerRoot.render(
-    <React.StrictMode>
-      <GlobalStyle />
-      <Footer />
-    </React.StrictMode>
-  );
-}
+renderComponentIntoElement('root-main', App);
+renderComponentIntoElement('root-header', Header);
+renderComponentIntoElement('root-footer', Footer);
